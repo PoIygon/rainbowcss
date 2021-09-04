@@ -10,28 +10,90 @@
 <body>
     <nav>
         <ul>
-            <li><a href="#">this is a great navbar</a></li>
-            <li><a href="#">lorem</a></li>
-            <li><a href="#">lorem</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#install">Installation</a></li>
+            <li><a href="#element">Elements</a></li>
+            <li><a href="#custom">Customise</a></li>
+            <li><a href="#credit">Credits</a></li>
         </ul>
     </nav>
-    <h1>hello</h1>
-    <h2>hello</h2>
-    <h3>hello</h3>
-    <h4>hello</h4>
-    <h5>hello</h5>
-    <h6>hello</h6>
-    <p>hello</p>
+    <h1 id="home">Rainbow CSS</h1>
     <section>
-        <h1>hello</h1>
-        <p>yeah this is <a href="#">great</a></p>
-        <p>lorem</p>
-        <p>lorem</p>
-        <p>lorem</p>
-        <code>
-            button
-        </code>
+        <p>rainbow css is the css file that makes your life easier in html i think idk.</p>
+        <p>just a link in the header and your good to go!</p>
     </section>
-    <mark>hi</mark><a> hi</a>
+    <h1 id="install">Installation</h1>
+    <section>
+        <p>you can download the css file over <a href="/rainbowcss.css" download>here</a> and then use</p>
+        <pre><code>&lt;link rel="stylesheet" href="/rainbowcss.css"&gt;</code></pre>
+        <p>or if you dont wanna download it just do</p>
+        <pre><code>&lt;link rel="stylesheet" href="https://rainbowcss.vercel.app/rainbowcss.css"&gt;</code></pre>
+    </section>
+    <h1 id="element">Elements</h1>
+    <section>
+        <section><p>you can use sections to section up chapters in a book</p></section>
+        <p><mark>markup</mark> can be used to underline something important and you can also hover over it</p>
+        <a>this is a link without a href</a>
+        <br><br>
+        <a href="#">this is a link <strong>with</strong> a href</a>
+        <h1>h1 elements are rainbow like the navbar at the top!</h1>
+        <h2>but ever other h-number element is just black.</h2>
+        <button>you can use buttons to make clickable links pop-out</button>
+        <p>you can also use <code>code</code> to show small code snippets</p>
+        <p>and you can use the <code>pre</code> element to show big code snippets like the one below</p>
+        <p>and theres navbar elements so visitors of your website have something to click on when their bored.</p>
+        <!-- make a navbar in the code element -->
+        <pre>
+&lt;nav&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="https://polyhedron.vercel.app"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="https://testwebsite-nine.vercel.app"&gt;test website&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;another navbar thing&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;
+        </pre>
+    </section>
+    <h1 id="custom">Customisable Crazyness!</h1>
+    <section>
+        <p>you can customise the hell out of this css file. you can go over <a href="https://github.com/PoIygon/rainbowcss/">here</a> and make a fork of the repository so you can make your own theme! (i tried me best sectioning the css up into little chunks)
+            <pre>
+:root {
+    --font: 'Roboto', sans-serif;
+    --codeFont: 'monospace';
+
+    --backgroundColour: white;
+    --backgroundColourDark: #cacaca;
+    --textColour: black;
+    --textColourLight: #646464;
+
+    --linkColor: #06f;
+    --linkHoverColor: #0044cc80;
+    --linkVisitedColor: #02c;
+
+    --gradient: linear-gradient(to right top, #9900ff, #e900c2, #ff0082, #ff0047, #ff0000);
+    --clip: text;
+    --duration: 0.5s;
+    --longDuration: 15s;
+
+    --borderRadius: 5px;
+    --borderWidth: 4px;
+    --borderShadow: 0 0 10px #b9b9b9;
+
+    --navPadding: 1.5em;
+    --padding: 0.5em 1em;
+
+    --margin: 1em 0;
+    --centreMargin: 0 auto;
+
+    --bodyWidth: 50em;
+}
+            </pre>
+        </p>
+    </section>
+    <h1 id="credit">Credits</h1>
+    <section>
+        <p>rainbow css was made by <a href="https://github.com/poIygon/">Polygon</a>
+        <p>insperation from <a href="https://github.com/MystPi">MystPi</a></p>
+    </section>
 </body>
 </html>
