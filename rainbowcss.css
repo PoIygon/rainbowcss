@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+    --font: 'Roboto', sans-serif;
+
+    --backgroundColour: white;
+    --textColour: black;
+
+    --linkColor: #06f;
+    --linkHoverColor: #04c;
+    --linkVisitedColor: #04c;
+
+    --gradient: linear-gradient(to right top, #9900ff, #e900c2, #ff0082, #ff0047, #ff0000);
+    --clip: text;
+    --animation: color 0.2s ease;
+
+    --borderRadius: 5px;
+    --borderWidth: 1px;
+    --borderShadow: 0 0 10px #838383;
+
+    --navPadding: 1.5em;
+    --padding: 1em;
+
+    --margin: 1em 0;
+    --centreMargin: 0 auto;
+}
+
+/* ==================================================================================================================== */
+
+body {
+    font-family: var(--font);
+    background-color: var(--backgroundColour);
+    color: var(--textColour);
+    margin: 0;
+}
+
+.wrapper {
+    width: 60%;
+    margin: var(--centreMargin);
+}
+
+h1 {
+    background-image: var(--gradient);
+    background-size: 400% 400%;
+    color: transparent;
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-animation: var(--animation);
+            animation: var(--animation);
+}
+
+h1, h2, h3, h4, h5, h6, strong {
+    font-weight: bold;
+}
+
+/* ================================================================= */
+
+a {
+    color: var(--linkColor);
+    text-decoration: none;
+    border-bottom: var(--borderWidth) solid var(--linkColor);
+    -webkit-transition: var(--animation);
+         -o-transition: var(--animation);
+            transition: var(--animation);
+}
+
+a:hover {
+    color: var(--linkHoverColor);
+    border-bottom: var(--borderWidth) solid var(--linkHoverColor);
+}
+
+a:visited {
+    color: var(--linkVisitedColor);
+    border-bottom: var(--borderWidth) solid var(--linkVisitedColor);
+}
+
+/* =============================================================================== */
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* =============================================================================== */
+
+nav {
+    position: sticky;
+    background-image: var(--gradient);
+    background-size: 400% 400%;
+    -webkit-transition: var(--animation);
+         -o-transition: var(--animation);
+            transition: var(--animation);
+}
+
+nav>ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: var(--navPadding);
+    margin: 0;
+}
+
+nav>ul>li>a:link {
+    font-size: 1.5em;
+    color: var(--backgroundColour);
+    border: none;
+}
+
+/* ================================================================ */
+
+section {
+    border: solid var(--borderWidth) var(--borderColor);
+    border-radius: var(--borderRadius);
+    box-shadow: var(--borderShadow);
+    padding: var(--padding);
+    margin: var(--margin);
+}
+
+/* ===================================================================x */
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(128, 128, 128, 0.5);
+    border-radius: var(--borderRadius);
+}
+
+/* ====================================================================== */
