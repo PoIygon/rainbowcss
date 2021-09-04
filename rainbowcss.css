@@ -2,20 +2,24 @@
 
 :root {
     --font: 'Roboto', sans-serif;
+    --codeFont: 'monospace';
 
     --backgroundColour: white;
+    --backgroundColourDark: #cacaca;
     --textColour: black;
+    --textColourLight: #646464;
 
     --linkColor: #06f;
-    --linkHoverColor: #04c;
-    --linkVisitedColor: #04c;
+    --linkHoverColor: #0044cc80;
+    --linkVisitedColor: #02c;
 
     --gradient: linear-gradient(to right top, #9900ff, #e900c2, #ff0082, #ff0047, #ff0000);
     --clip: text;
-    --animation: color 0.2s ease;
+    --duration: 0.5s;
+    --longDuration: 15s;
 
     --borderRadius: 5px;
-    --borderWidth: 1px;
+    --borderWidth: 4px;
     --borderShadow: 0 0 10px #838383;
 
     --navPadding: 1.5em;
@@ -23,6 +27,8 @@
 
     --margin: 1em 0;
     --centreMargin: 0 auto;
+
+    --bodyWidth: 50em;
 }
 
 /* ==================================================================================================================== */
@@ -31,22 +37,19 @@ body {
     font-family: var(--font);
     background-color: var(--backgroundColour);
     color: var(--textColour);
-    margin: 0;
-}
-
-.wrapper {
-    width: 60%;
-    margin: var(--centreMargin);
+    max-width: var(--bodyWidth);
+    margin: 1em auto;
 }
 
 h1 {
     background-image: var(--gradient);
     background-size: 400% 400%;
     color: transparent;
+    background-size: 400% 400%;
+    background-image: var(--gradient);
     -webkit-background-clip: text;
             background-clip: text;
-    -webkit-animation: var(--animation);
-            animation: var(--animation);
+    animation: gradient var(--longDuration) infinite;
 }
 
 h1, h2, h3, h4, h5, h6, strong {
@@ -55,17 +58,20 @@ h1, h2, h3, h4, h5, h6, strong {
 
 /* ================================================================= */
 
-a {
-    color: var(--linkColor);
+a:link {
+    color: var(--textColour);
     text-decoration: none;
     border-bottom: var(--borderWidth) solid var(--linkColor);
-    -webkit-transition: var(--animation);
-         -o-transition: var(--animation);
-            transition: var(--animation);
+    -webkit-transition-property: background-color;
+         -o-transition-property: background-color;
+            transition-property: background-color;
+    -webkit-transition-duration: var(--duration);
+         -o-transition-duration: var(--duration);
+            transition-duration: var(--duration);
 }
 
-a:hover {
-    color: var(--linkHoverColor);
+a:link:hover {
+    background-color: var(--linkHoverColor);
     border-bottom: var(--borderWidth) solid var(--linkHoverColor);
 }
 
@@ -92,11 +98,6 @@ a:visited {
 
 nav {
     position: sticky;
-    background-image: var(--gradient);
-    background-size: 400% 400%;
-    -webkit-transition: var(--animation);
-         -o-transition: var(--animation);
-            transition: var(--animation);
 }
 
 nav>ul {
@@ -107,10 +108,23 @@ nav>ul {
     margin: 0;
 }
 
-nav>ul>li>a:link {
+nav>ul>li {
     font-size: 1.5em;
-    color: var(--backgroundColour);
-    border: none;
+}
+
+nav>ul>li>a:link {
+    font-weight: bold;
+    color: transparent;
+    border-bottom: none;
+    background-size: 400% 400%;
+    background-image: var(--gradient);
+    -webkit-background-clip: text;
+            background-clip: text;
+    animation: gradient var(--longDuration) infinite;
+}
+
+nav>ul>li>a:link:hover {
+    border-bottom: none;
 }
 
 /* ================================================================ */
@@ -136,3 +150,43 @@ section {
 }
 
 /* ====================================================================== */
+
+pre, code {
+    background-color: var(--backgroundColourDark);
+    color: var(--textColourLight);
+    border-radius: var(--borderRadius);
+    padding: var(--padding);
+    margin: var(--margin);
+}
+
+/* ========================================================================= */
+
+mark {
+    background-color: transparent;
+    border-bottom: var(--borderWidth) solid yellow;
+    -webkit-transition-property: background-color;
+         -o-transition-property: background-color;
+            transition-property: background-color;
+    -webkit-transition-duration: var(--duration);
+         -o-transition-duration: var(--duration);
+            transition-duration: var(--duration);
+}
+
+mark:hover {
+    background-color: rgba(255, 255, 0, 0.5);
+}
+
+a {
+    background-color: transparent;
+    border-bottom: var(--borderWidth) solid #ff0000;
+    -webkit-transition-property: background-color;
+         -o-transition-property: background-color;
+            transition-property: background-color;
+    -webkit-transition-duration: var(--duration);
+         -o-transition-duration: var(--duration);
+            transition-duration: var(--duration);
+}
+
+a:hover {
+    background-color: #ff000080;
+}
